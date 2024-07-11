@@ -1,0 +1,4 @@
+[build]
+entry = "src/index.ts"
+outdir = "dist"
+target = "bun"
