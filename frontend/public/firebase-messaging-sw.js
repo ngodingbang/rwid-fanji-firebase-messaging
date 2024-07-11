@@ -2,12 +2,12 @@ importScripts("https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js");
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCBPszTV4_noTmGjzv009VNpT0oH4_2pUg",
-  authDomain: "legal-plus-64781.firebaseapp.com",
-  projectId: "legal-plus-64781",
-  storageBucket: "legal-plus-64781.appspot.com",
-  messagingSenderId: "895467007440",
-  appId: "1:895467007440:web:0bb8d5eb09aba7d394ddd5",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
 };
 
 firebase.initializeApp(firebaseConfig)
