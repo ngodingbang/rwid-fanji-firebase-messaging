@@ -25,12 +25,12 @@ messaging.onBackgroundMessage(function(payload) {
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
 
-self.addEventListener ("activate", async () => {
-  const token = await messaging.getToken(messaging, { vapidKey: 'BHCPOJOFLKg_-OLAaJ6aejF-eDipJ9viMI8Hue6ud4ZjZJ38XV9JgAWX-ZVAD-JZyiPzO_6kwe7QSEzWZ3_AseY'});
-  if (token) {
-    console.log('Token:', token);
-    return token;
-  } else {
-    console.log('No registration token available. Request permission to generate one.');
-  }
-})
+self.addEventListener("activate", async () => {
+    const token = await messaging.getToken({ vapidKey: 'YOUR_VAVID_KEY' });
+    if (token) {
+      console.log('Token:', token);
+      return token;
+    } else {
+      console.log('No registration token available. Request permission to generate one.');
+    }
+  });
