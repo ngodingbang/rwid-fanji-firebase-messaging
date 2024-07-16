@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "type": "module",
+
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun",
     "start": "bun run dist/index.js",

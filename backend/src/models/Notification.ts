@@ -1,18 +1,19 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model, Document } from "mongoose";
 
-interface INotification extends Document {
+export interface INotification extends Document {
   title: string;
   body: string;
   clientId: string;
+  session: string;
+  createdAt: Date;
 }
 
 const notificationSchema = new Schema<INotification>({
   title: { type: String, required: true },
   body: { type: String, required: true },
-  clientId: { type: String, require: true }
+  clientId: { type: String, required: true },
+  session: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
 });
 
-const Notification = model<INotification>('Notification', notificationSchema);
-
-export { Notification };
-export type { INotification };
+export default model<INotification>("Notification", notificationSchema);
