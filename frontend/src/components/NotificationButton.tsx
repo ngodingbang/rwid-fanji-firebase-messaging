@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
-import { requestPermission } from '../firebaseConfig';
+import { toast } from 'react-toastify';
 
-const NotificationButton: React.FC = () => {
-  const [token, setToken] = useState<string | null>(null);
-
-  const handleNotification = async () => {
-    const currentToken = await requestPermission();
-    if (currentToken) {
-      setToken(currentToken);
-    }
-  };
+function NotificationButton () {
+  const handleClick = () => {
+    toast('Notification Clicked')
+  }
 
   return (
-    <div>
-      <button onClick={handleNotification}>Send Notification</button>
-      {token && <p>Token: {token}</p>}
-    </div>
+      <button onClick={handleClick}>
+        Click for notification
+      </button>
   );
 };
 
